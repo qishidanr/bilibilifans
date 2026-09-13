@@ -1,7 +1,7 @@
 # 喜报 · B站粉丝见证
 
 用 GitHub Actions 定时抓取 B 站 UP 主的粉丝数，写入仓库，再由 GitHub Pages 把一张「奖状」图片展示成全屏喜报网页。名字、粉丝数、字体、文案、刷新间隔、虚报数值等都能在 `config.json` 里改。
-
+https://qishidanr.github.io/bilibilifans
 ## 文件结构
 
 ```
