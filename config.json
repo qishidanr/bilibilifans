@@ -7,7 +7,7 @@
   "numberFont": "Georgia, \"Times New Roman\", \"STZhongsong\", serif",
   "texts": {
     "documentTitle": "喜报",
-    "label": "哔哩哔哩粉丝数",
+    "label": "哔哩哔哩粉丝数已达到",
     "unit": "位",
     "deltaUp": "较上次 +{n}",
     "deltaDown": "较上次 -{n}",
