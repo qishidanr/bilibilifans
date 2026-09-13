@@ -1,0 +1,106 @@
+:root {
+  --red: #c0131a;
+  --red-deep: #8c0d12;
+  --gold: #f3d27a;
+  --font: "STKaiti", "KaiTi", "KaiTi_GB2312", "FangSong", "STFangsong",
+    "Songti SC", "SimSun", serif;
+  --number-font: Georgia, "Times New Roman", "STZhongsong", serif;
+  --side-bg: linear-gradient(to right, #f5270d 0%, #ff0000 50%, #f5270d 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--side-bg);
+  color: var(--gold);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* 全屏奖状：等比缩放铺满视口（顶部到说明条之间），不变形、不裁剪 */
+.certificate {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100vw, calc(100vh * 1111 / 768));
+  aspect-ratio: 1111 / 768;
+  background-color: #f6d848;
+  background-image: url('assets/certificate.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 动态文字叠在中间留白区（避开顶部徽记 ~<32% 与底部落款 ~>76%） */
+.overlay {
+  position: absolute;
+  inset: 33% 9% 24% 9%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5%;
+  text-align: center;
+}
+
+.up-name {
+  margin: 0;
+  font-size: clamp(20px, 5.6vw, 50px);
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  word-break: break-all;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.label {
+  margin: 0;
+  font-size: clamp(13px, 2.8vw, 22px);
+  color: var(--red-deep);
+  letter-spacing: 0.22em;
+}
+
+.follower {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+}
+
+.follower .number {
+  font-family: var(--number-font);
+  font-size: clamp(46px, 12vw, 110px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--red);
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.follower .unit {
+  font-size: clamp(15px, 3.2vw, 26px);
+  color: var(--red-deep);
+  letter-spacing: 0.1em;
+}
+
+.delta {
+  margin: 0;
+  font-size: clamp(12px, 2.5vw, 18px);
+  color: var(--red-deep);
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 520px) {
+  .overlay { inset: 33% 7% 24% 7%; }
+}

@@ -1,0 +1,16 @@
+{
+  "uid": 9434166,
+  "offset": 0,
+  "refreshSeconds": 5,
+  "showSideGradient": true,
+  "font": "\"STKaiti\", \"KaiTi\", \"KaiTi_GB2312\", \"FangSong\", \"STFangsong\", \"Songti SC\", \"SimSun\", serif",
+  "numberFont": "Georgia, \"Times New Roman\", \"STZhongsong\", serif",
+  "texts": {
+    "documentTitle": "喜报",
+    "label": "哔哩哔哩粉丝数",
+    "unit": "位",
+    "deltaUp": "较上次 +{n}",
+    "deltaDown": "较上次 -{n}",
+    "loading": "加载中…"
+  }
+}
